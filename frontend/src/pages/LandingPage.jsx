@@ -473,38 +473,20 @@ function LandingPage() {
 
       {/* PLAYGROUND */}
       <section className="w-full py-16 sm:py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden" aria-labelledby="playground-heading">
-        {/* Background decoration */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(236,72,153,0.1),transparent_70%)]" />
-        <div className="absolute top-1/4 right-0 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl" />
-
-        <div className="relative max-w-6xl mx-auto px-4">
+        <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 rounded-full border border-pink-500/30 bg-pink-500/10 px-4 py-2 text-sm text-pink-300 mb-6">
               <PlayIcon className="w-4 h-4" />
-              See the magic in action
+              Try it now
             </div>
             <h2 id="playground-heading" className="text-[clamp(1.5rem,4vw,2.5rem)] sm:text-[clamp(2rem,4vw,3rem)] font-bold text-slate-100 mb-6">
-              Experience the power of
-              <span className="block bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text text-transparent">instant translation</span>
+              Test our translation
+              <span className="block bg-gradient-to-r from-pink-400 to-cyan-400 bg-clip-text text-transparent">right here, right now</span>
             </h2>
             <p className="text-slate-300 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed mb-8">
-              Don't just take our word for it. <strong className="text-slate-200">Try it yourself</strong> and see how Lingua Link
-              transforms conversations in real-time. Type any message and watch the magic happen.
+              Type any message and see how accurately we translate it. <strong className="text-slate-200">No signup required</strong> - 
+              just pure translation power at your fingertips.
             </p>
-
-            {/* Quick examples */}
-            <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
-              <button className="px-3 py-1 text-xs bg-slate-800/60 border border-slate-700/60 rounded-full text-slate-300 hover:bg-slate-700/60 transition-colors">
-                "Hello, how can I help you?"
-              </button>
-              <button className="px-3 py-1 text-xs bg-slate-800/60 border border-slate-700/60 rounded-full text-slate-300 hover:bg-slate-700/60 transition-colors">
-                "I'd like to place an order"
-              </button>
-              <button className="px-3 py-1 text-xs bg-slate-800/60 border border-slate-700/60 rounded-full text-slate-300 hover:bg-slate-700/60 transition-colors">
-                "What are your business hours?"
-              </button>
-            </div>
           </div>
 
           <TranslatePlayground />
@@ -523,6 +505,32 @@ function LandingPage() {
               <div className="flex items-center gap-2">
                 <CheckCircle2Icon className="w-4 h-4 text-green-400" />
                 <span>95%+ accuracy</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA STRIP */}
+      <section className="w-full py-10" aria-labelledby="cta-heading">
+        <div className="max-w-6xl mx-auto px-4">
+          <h2 id="cta-heading" className="sr-only">Get started</h2>
+          <div className="rounded-2xl border border-slate-700/60 bg-gradient-to-r from-slate-800/60 to-slate-900/60 p-8 sm:p-12 w-full">
+            <div className="text-center mb-8">
+              <h3 className="text-3xl font-bold text-slate-100 mb-4">
+                Ready to <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">connect with the world</span>?
+              </h3>
+              <p className="text-slate-300 text-lg mb-6 max-w-2xl mx-auto">
+                Join thousands of people who are building friendships and staying close to family across language barriers.
+                <strong className="text-slate-200">Start chatting today</strong> - it's completely free to begin.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full">
+              <Link to="/signup" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                Start Chatting - It's Free!
+              </Link>
+              <div className="text-sm text-slate-400">
+                ✓ No credit card required ✓ Works in your browser ✓ 50+ languages
               </div>
             </div>
           </div>
@@ -647,32 +655,6 @@ function LandingPage() {
         </div>
       </section>
 
-      {/* CTA STRIP */}
-      <section className="w-full py-10" aria-labelledby="cta-heading">
-        <div className="max-w-6xl mx-auto px-4">
-          <h2 id="cta-heading" className="sr-only">Get started</h2>
-          <div className="rounded-2xl border border-slate-700/60 bg-gradient-to-r from-slate-800/60 to-slate-900/60 p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="flex items-center gap-3">
-              <div className="size-10 rounded-lg bg-slate-800 grid place-items-center border border-slate-700/60">
-                <LanguagesIcon className="w-5 h-5 text-cyan-400" />
-              </div>
-              <div>
-                <p className="text-slate-200 font-semibold">Ready to start translating with one click?</p>
-                <p className="text-slate-400 text-sm">Create an account in seconds and send your first message.</p>
-              </div>
-            </div>
-            <div className="flex items-center gap-3">
-              <Link to="/signup" className="px-4 py-2.5 rounded-md bg-gradient-to-r from-cyan-500 to-pink-500 text-white font-medium shadow hover:opacity-95 transition-opacity">
-                Get started free
-              </Link>
-              <Link to="/login" className="px-4 py-2.5 rounded-md border border-slate-700/60 text-slate-200 hover:bg-slate-800/60 transition-colors">
-                Log in
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* FAQ */}
       <section ref={faq.ref} id="faq" className="w-full py-16 sm:py-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900" aria-labelledby="faq-heading">
         <div className="max-w-6xl mx-auto px-4">
@@ -723,53 +705,33 @@ function LandingPage() {
               q="What if I have problems or need help?"
               a="We're here to help! You can reach out through our support chat, and we'll get back to you quickly. Most questions are answered within a few hours, and we're always happy to help you connect with people around the world."
             />
-
-            {/* Final CTA */}
-            <div className="mt-16 text-center bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-2xl border border-cyan-500/20 p-8">
-              <h3 className="text-2xl font-bold text-slate-100 mb-4">
-                Ready to <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">connect with the world</span>?
-              </h3>
-              <p className="text-slate-300 text-lg mb-6 max-w-2xl mx-auto">
-                Join thousands of people who are building friendships and staying close to family across language barriers.
-                <strong className="text-slate-200">Start chatting today</strong> - it's completely free to begin.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-                  Start Chatting - It's Free!
-                </button>
-                <div className="text-sm text-slate-400">
-                  ✓ No credit card required ✓ Works in your browser ✓ 50+ languages
-                </div>
-              </div>
-            </div>
           </div>
         </div>
-      </section>
 
       {/* FOOTER */}
       <footer className="w-full py-12 bg-slate-900/80 border-t border-slate-700/60">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6 relative z-10">
             <div className="text-center md:text-left">
               <p className="text-slate-300 font-medium mb-1">© {new Date().getFullYear()} Lingua Link</p>
               <p className="text-slate-500 text-sm">Breaking down language barriers worldwide</p>
             </div>
-            <div className="flex items-center gap-6">
+            <div className="flex items-center gap-6 relative z-10">
               <Link
                 to="/privacy"
-                className="px-4 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all duration-200 font-medium"
+                className="px-4 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all duration-200 font-medium cursor-pointer relative z-20"
               >
                 Privacy Policy
               </Link>
               <Link
                 to="/terms"
-                className="px-4 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all duration-200 font-medium"
+                className="px-4 py-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800/60 transition-all duration-200 font-medium cursor-pointer relative z-20"
               >
                 Terms of Service
               </Link>
               <Link
                 to="/features"
-                className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 hover:text-white hover:from-cyan-500/30 hover:to-purple-500/30 transition-all duration-200 font-medium"
+                className="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 hover:text-white hover:from-cyan-500/30 hover:to-purple-500/30 transition-all duration-200 font-medium cursor-pointer relative z-20"
               >
                 Features
               </Link>
